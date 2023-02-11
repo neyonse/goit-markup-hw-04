@@ -10,6 +10,7 @@
   --button-hover-color: #404bbf;
   --button-border-color: #e7e9fc;
   --icon-social-hover: #31d0aa;
+  --helper-text-color: #8e8f99;
   --cards-gap: 24px;
   --features-item-number: 4;
   --services-item-number: 3;
@@ -316,19 +317,19 @@ header {
 }
 
 .features-item:nth-child(1)::before {
-  background-image: url(../images/icons.svg/strategy-icon.svg);
+  background-image: url(../images/icon-strategy.svg);
 }
 
 .features-item:nth-child(2)::before {
-  background-image: url(../images/icons.svg/punctuality-icon.svg);
+  background-image: url(../images/icon-punctuality.svg);
 }
 
 .features-item:nth-child(3)::before {
-  background-image: url(../images/icons.svg/diligence-icon.svg);
+  background-image: url(../images/icon-diligence.svg);
 }
 
 .features-item:nth-child(4)::before {
-  background-image: url(../images/icons.svg/technologies-icon.svg);
+  background-image: url(../images/icon-technologies.svg);
 }
 
 /* Services section */
@@ -422,11 +423,20 @@ header {
     (100% - var(--cards-gap) * (var(--customers-item-number) - 1)) /
       var(--customers-item-number)
   );
+  height: 88px;
 }
 
 .customers-link {
   display: flex;
-  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--helper-text-color);
+  border-radius: 4px;
+}
+
+.customers-icon {
   height: 56px;
   width: 104px;
 }
