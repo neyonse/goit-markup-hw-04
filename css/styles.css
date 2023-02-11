@@ -236,7 +236,7 @@ header {
 
 .address-list a {
   font-style: normal;
-  color: var(--text-title-color);
+  color: var(--text-main-color);
 }
 
 .nav-link:hover,
@@ -278,6 +278,8 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-title {
@@ -306,33 +308,16 @@ header {
   );
 }
 
-.features-item::before {
-  content: '';
-
-  display: block;
+.features-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 112px;
   margin-bottom: 8px;
 
   background-color: var(--button-color);
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 4px;
-}
-
-.features-item:nth-child(1)::before {
-  background-image: url(../images/icon-strategy.svg);
-}
-
-.features-item:nth-child(2)::before {
-  background-image: url(../images/icon-punctuality.svg);
-}
-
-.features-item:nth-child(3)::before {
-  background-image: url(../images/icon-diligence.svg);
-}
-
-.features-item:nth-child(4)::before {
-  background-image: url(../images/icon-technologies.svg);
 }
 
 /* Services section */
@@ -487,11 +472,20 @@ header {
   );
 }
 
+.portfolio-link {
+  display: block;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-link:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-item-description {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
-
   border-right: 1px solid var(--button-border-color);
   border-bottom: 1px solid var(--button-border-color);
   border-left: 1px solid var(--button-border-color);
