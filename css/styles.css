@@ -10,7 +10,7 @@
   --button-hover-color: #404bbf;
   --button-border-color: #e7e9fc;
   --icon-social-hover: #31d0aa;
-  --helper-text-color: #8e8f99;
+  --customers-color: #8e8f99;
   --cards-gap: 24px;
   --features-item-number: 4;
   --services-item-number: 3;
@@ -28,7 +28,8 @@ body {
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
+  max-width: 1158px;
 
   padding: 0 15px;
   margin: 0 auto;
@@ -191,6 +192,7 @@ header {
 
 .nav-flex {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -229,6 +231,7 @@ header {
 
 .address-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .address-list a {
@@ -405,6 +408,11 @@ header {
   border-radius: 50%;
 }
 
+.team-link-social:hover,
+.team-link-social:focus {
+  background-color: var(--button-hover-color);
+}
+
 .team-icon-social {
   width: 16px;
   height: 16px;
@@ -432,13 +440,24 @@ header {
   align-items: center;
   height: 100%;
   width: 100%;
-  border: 1px solid var(--helper-text-color);
+  border: 1px solid var(--customers-color);
+  color: var(--customers-color);
   border-radius: 4px;
+}
+
+.customers-link:is(:hover, :focus) {
+  border-color: var(--button-hover-color);
+  color: var(--button-hover-color);
 }
 
 .customers-icon {
   height: 56px;
   width: 104px;
+  fill: currentColor;
+}
+
+.customers-link:is(:hover, :focus) .customers-icon {
+  fill: currentColor;
 }
 
 /* PORTFOLIO PAGE */
@@ -489,6 +508,7 @@ footer {
 
 .footer-container {
   display: flex;
+  gap: 120px;
 }
 
 .footer-logo-container {
@@ -498,10 +518,6 @@ footer {
 .footer-logo-text {
   margin-top: 16px;
   color: var(--button-border-color);
-}
-
-.footer-social {
-  margin-left: 120px;
 }
 
 .footer-social-title {
