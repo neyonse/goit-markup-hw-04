@@ -17,6 +17,8 @@
   --team-item-number: 4;
   --customers-item-number: 6;
   --portfolio-item-number: 3;
+  --shadow-cards: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /* Body basic style */
@@ -358,8 +360,7 @@ header {
   );
 
   background-color: var(--text-second-color);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: var(--shadow-cards);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -398,11 +399,6 @@ header {
   background-color: var(--button-hover-color);
 }
 
-.team-icon-social {
-  width: 16px;
-  height: 16px;
-}
-
 /* CUSTOMERS SECTION */
 
 .customers-list {
@@ -423,21 +419,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
-  border: 1px solid var(--customers-color);
+  height: 100%;
+
   color: var(--customers-color);
+
+  border: 1px solid var(--customers-color);
   border-radius: 4px;
 }
 
 .customers-link:is(:hover, :focus) {
-  border-color: var(--button-hover-color);
   color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
 }
 
 .customers-icon {
-  height: 56px;
-  width: 104px;
   fill: currentColor;
 }
 
@@ -474,18 +470,14 @@ header {
 
 .portfolio-link {
   display: block;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-link:is(:hover, :focus) {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: var(--shadow-cards);
 }
 
 .portfolio-item-description {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
+  padding: 32px 16px;
   border-right: 1px solid var(--button-border-color);
   border-bottom: 1px solid var(--button-border-color);
   border-left: 1px solid var(--button-border-color);
